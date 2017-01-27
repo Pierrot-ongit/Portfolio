@@ -1,0 +1,18 @@
+<?php $session = new Session() ?>
+<?php $getsession = $session->get('user') ?>
+
+<?php if(isset($errorMessage)) : ?>
+    <div class="notice error">
+        <p><?= $errorMessage ?></p>
+    </div>
+<?php endif ?>
+
+
+<?php if(isset($newOrder)): ?>
+    <?php var_dump($newOrder) ?>
+
+<?php endif ?>
+
+
+
+

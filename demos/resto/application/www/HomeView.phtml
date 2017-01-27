@@ -1,0 +1,26 @@
+<?php if($flash->hasMessages()): ?>
+    <div class="notice"><strong><?= $flash->fetchMessage() ?></strong></div>
+<?php endif ?>
+<table class="generic-table meal-list">
+    <caption>Carte du restaurant</caption>
+    <thead>
+
+    <tbody>
+    <!-- Liste des produits -->
+    <?php foreach($products as $product): ?>
+    <tr>
+        <td>
+            <img src="<?= $wwwUrl ?>/images/meals/<?= $product['image'] ?>">
+        </td>
+        <td>
+            <p><strong><?= $product['nameProduct'] ?></strong></p>
+            <p><?= $product['description'] ?></p>
+        </td>
+        <td>
+            <p class="number"><strong><?= $product['salePrice'] ?>€</strong></p>
+        </td>
+    </tr>
+    <?php endforeach ?>
+    </tbody>
+
+</table>

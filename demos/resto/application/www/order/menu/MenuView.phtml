@@ -1,0 +1,11 @@
+ <img src="<?= $wwwUrl ?>/images/meals/<?= $productSelected['image'] ?>">
+    <p><?= $productSelected['description'] ?></p>
+    <p class="number">Prix : <strong><?= $productSelected['salePrice'] ?>€</strong></p>
+ <input type="hidden" name="id" value="<?= $productSelected['id'] ?>">
+ <input type="hidden" name="price" value="<?= $productSelected['salePrice'] ?>">
+ <input type="hidden" name="image" value="<?= $productSelected['image'] ?>">
+ <?php if(isset($errorMessage)) : ?>
+     <div class="notice error">
+         <p><?= $errorMessage ?></p>
+     </div>
+ <?php endif ?>

@@ -1,0 +1,46 @@
+Ceci est extraction du dossier application qui contient une page pour servir de backoffice pour l'administration du contenu du site.
+
+Pour pouvoir l'utiliser, il faut faire attention à plusieurs choses et régler plusieurs paramètres.
+
+1*/ Faite attention de ne pas écraser ou remplacer vos fichiers initiaux avec ceux contenus dans ce dossier. Votre travail sera perdu. Le mieux est de créer une copie du dossier 'projet' (contenant tout le projet) et de remplacer alors le contenu du dossier 'application' de la copie par celui de ce dossier.
+
+2*/ Tout d'abord dans le fichier : config/database.php 
+il est nécessaire de s'assurer les paramètres de connections à la BDD sont corretcs.
+
+3*/ Modifier la table users (ou customers) contenant les données des comptes utilisateurs, et ajouter y un champ "role" (en varchar). Choisissez une entrée de la table (un compte utilisateur en gros), et modifier la valeur du nouveau champ "role" pour "administrateur"
+
+
+4*/ Il faut ensuite vérifier les différentes classes Models; contenues dans le dossier 'models'. Modifier les noms des tables, ainsi que de leurs champs (fields) pour qu'ils correspondent aux votres. Ces fichiers ont notamment été édités pour contenir des fonctions d'édition et de suppression de contenu.
+
+
+5*/ En vous connectant via votre compte avec le role administrateur vous devriez voir un bouton bleue "Administration" dans la barre de navigation. Il vous amenera sur la page index.php/admin, qui est la page de back office.
+
+Voici l'arborescence des dossiers et fichiers liés à ce back office:
+
+
+
+
+controllers
+	/admin
+		AdminController.php
+		/adminproducts
+			AdminproductsController.php
+		/delette
+			DeletteController.php
+
+models => Tous les fichiers models
+	
+www
+	/admin
+		AdminView.pĥtml	
+		/adminprodutcs
+			AdminproductsView.phtml
+		/delette
+			DeletteView.phtml
+	
+	css/
+		3wa-resto.css  (à la fin du fichier)
+		form.css (le formulaire popup d'edition de comptes utilisateurs)
+	/js
+		admin.js		
+	

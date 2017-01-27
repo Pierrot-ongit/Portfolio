@@ -1,0 +1,169 @@
+<head>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/form.css">
+</head>
+<?php if($flash->hasMessages()): ?>
+    <div class="notice"><strong><?= $flash->fetchMessage() ?></strong></div>
+<?php endif ?>
+<table class="generic-table meal-list">
+    <caption>Liste des réservations</caption>
+    <thead>
+    <tr>
+        <td>N° de réservation</td>
+        <td>Date réservée</td>
+        <td>Nombre de couverts</td>
+        <td>Date de création de la réservation</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- Liste des réservations -->
+    <?php foreach($bookings as $booking): ?>
+        <tr>
+            <td>
+               <p><?= $booking['id'] ?></p>
+            </td>
+            <td>
+                <p><strong><?= $booking['bookingDate'] ?></strong></p>
+            </td>
+            <td>
+                <p><strong><?= $booking['covers'] ?></strong></p>
+            </td>
+            <td>
+                <p><?= $booking['creationTimeBooking'] ?></p>
+            </td>
+            <td>
+                <button class='button button-cancel delette' id="booking-<?= $booking['id'] ?>"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+
+</table>
+
+<table class="generic-table meal-list">
+    <caption>Liste des produits</caption>
+    <thead>
+    <tr>
+        <td></td>
+        <td>Nom</td>
+        <td>Quantité</td>
+        <td class="number">Prix d'achat</td>
+        <td class="number">Prix de vente</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- Liste des produits -->
+    <?php foreach($products as $product): ?>
+        <tr>
+            <td class="thumbnail">
+                <img  src="<?= $wwwUrl ?>/images/meals/<?= $product['image'] ?>">
+            </td>
+            <td>
+                <p><strong><?= $product['nameProduct'] ?></strong></p>
+            </td>
+            <td>
+                <ul class="link-list">
+                    <li class="quantity" id="Quty-<?= $product['id'] ?>">
+                        <?= $product['quantityInStock'] ?>
+                    </li>
+                    <li>
+                        <button class='button button-admin adding' id="adding<?= $product['id'] ?>"><i class="fa fa-plus-square"></i></button>
+                    </li>
+                    <li>
+                        <button class='button button-admin removing' id="removing<?= $product['id'] ?>"><i class="fa fa-minus-square"></i></button>
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <p class="number"><strong><?= $product['buyPrice'] ?> €</strong></p>
+            </td>
+            <td>
+                <p class="number"><strong><?= $product['salePrice'] ?> €</strong></p>
+            </td>
+            <td>
+                <button class='button button-cancel delette' id="product-delette-<?= $product['id'] ?>"><i
+                        class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+
+</table>
+<table class="generic-table meal-list">
+    <caption>Liste des utilisateurs</caption>
+    <thead>
+    <tr>
+        <td>Nom</td>
+        <td>Role</td>
+        <td>Email</td>
+        <td>Adresse</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- Liste des utilisateurs -->
+    <?php foreach($users as $user): ?>
+        <tr>
+
+            <td>
+                <p><strong><?= $user['firstName'].' '.$user['lastName'] ?></strong></p>
+            </td>
+            <td id="user-<?= $user['id'] ?>">
+                <?= $user['role'] ?>
+            </td>
+            <td>
+                <p><strong><?= $user['email'] ?></strong></p>
+            </td>
+            <td>
+                <p><?= $user['address'] ?></p>
+                <p><?= $user['city'].' '.$user['postalCode'] ?></p>
+            </td>
+            <td>
+                <ul class="link-list">
+                    <li>
+                        <button class='button button-admin edit-user' id="edit<?= $user['id'] ?>"><i class="fa fa-pencil-square"></i></button>
+                    </li>
+                    <li>
+                        <button class="button button-cancel delette" id="user-delette-<?= $user['id'] ?>"><i class="fa fa-trash"></i></button>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+
+</table>
+<div id="form-user">
+    <!-- Popup Div Starts Here -->
+    <div id="popup">
+        <!-- Contact Us Form -->
+        <form action="" id="form" method="post" name="form">
+            <button id="close" class="button button-cancel" onclick ="div_hide()"><i class="fa fa-times"></i></button>
+            <h2>Edit User Profil</h2>
+            <hr>
+            <input id="userID" name="userID" type="hidden" value="test">
+            <input id="firstName" name="firstName" placeholder="firstName" type="text">
+            <input id="lastName" name="lastName" placeholder="lastName" type="text">
+            <br><label for="role">Role :</label>
+            <select id="role" name="role">
+                <option value="customer">Customer</option>
+                <option value="manager">Manager</option>
+                <option value="administrateur">Administrateur</option>
+            </select>
+            <textarea id="address" name="address" placeholder="Adresse"></textarea>
+            <input id="City" name="City" placeholder="City" type="text">
+            <input id="ZipCode" name="ZipCode" placeholder="ZipCode" type="text">
+            <input id="Country" name="Country" placeholder="Country" type="text">
+            <input id="phone" name="phone" placeholder="Phone" type="text">
+            <a href="javascript:%20check_empty()" id="submit">Confirm</a>
+        </form>
+    </div>
+    <!-- Popup Div Ends Here -->
+</div>
+<!-- Display Popup Button -->
+
+
+<script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+<script src="<?= $wwwUrl ?>/js/ajax.js"></script>
+<script src="<?= $wwwUrl ?>/js/admin.js"></script>

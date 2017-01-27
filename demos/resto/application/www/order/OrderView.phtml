@@ -1,0 +1,63 @@
+<header>
+    
+</header>
+<h2><i class="fa fa-cart"></i> Passer une commande</h2>
+<form id="order" class="generic-form" action="<?= $requestUrl ?>/order/validation" method="post">
+    <fieldset>
+        <legend> Ajouter un article</legend>
+        <ul>
+            <li>
+                <label for="productName">Nom :</label>
+                <select id="productName" name="productName">
+                    <?php foreach($products as $product): ?>
+                        <option value="<?= $product['nameProduct'] ?>"><?= $product['nameProduct'] ?></option>
+                    <?php endforeach ?>
+                </select>
+                <div class="meal-details">
+                    
+                </div>
+            </li>
+            <li>
+                <label for="quantity">Quantité :</label>
+                <input type="number" id="quantity" name="quantity" class="quantity" value="1" min="1" max="100">
+            </li>
+
+        </ul>
+        <button type="" id="AddCart" class="button button-primary">Ajouter</button>
+    </fieldset>
+
+    <fieldset>
+        <legend> Récapitulatif de la commande</legend>
+        <table class="generic-table">
+            <thead>
+                <tr>
+                    <th>Quantité</th>
+                    <th>Produit</th>
+                    <th>Prix Unitaire</th>
+                    <th>Prix Total</th>
+                </tr>
+            </thead>
+            <!-- Liste des produits ajoutés dans le panier-->
+            <tbody>
+
+
+            </tbody>
+
+
+        </table>
+    </fieldset>
+</form>
+    <input type="hidden" name="test" value="test" />
+    <button class="button button-primary" id="validateCart">Valider la commande</button>
+    <a href='<?= $requestUrl ?>' class="button button-cancel">Annuler</a>
+
+
+<div class="order-details">
+
+</div>
+
+<!-- Javascript nécessaire pour la gestion du local storage et manipulation ajax -->
+<script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+<script src="<?= $wwwUrl ?>/js/ajax.js"></script>
+<script src="<?= $wwwUrl ?>/js/cart.js"></script>
+<script src="<?= $wwwUrl ?>/js/writeCart.js"></script>

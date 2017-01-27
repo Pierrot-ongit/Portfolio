@@ -1,0 +1,75 @@
+<?php $session = new Session() ?>
+<?php $getsession = $session->get('user') ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3WA Restaurant</title>
+
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/3wa-resto.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-button.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-form.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-table.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body>
+
+    <!-- En-tête commune -->
+    <header>
+        <p><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Portfolio/demos/demos.php">Retour au Portfolio</a></p>
+        <h1>
+            <a href="<?= $requestUrl ?>"><img src="<?= $wwwUrl ?>/images/logo.gif"></a> Restaurant - Made in America !
+        </h1>
+    </header>
+
+    <!-- Interface utilisateur -->
+    <nav class="user-interface">
+        <ul class="link-list">
+            <?php if(isset($getsession)) : ?>
+
+                <li><a href='<?= $requestUrl ?>/booking' class="button button-primary">Réserver</button></a></li>
+                <li><a href='<?= $requestUrl ?>/order' class="button button-primary">Commander</button></a></li>
+                <?php if($getsession['role']== 'administrateur') : ?>
+                         <li><a href='<?= $requestUrl ?>/admin' class="button button-admin">Administration</button></a></li>
+                <?php endif; ?>
+                <li class="layout-right">
+                    <span class="welcome">Bonjour <strong><?= $getsession['lastName'].' '.$getsession['firstName'] ?></strong> ! </span>
+                    <a href='<?= $requestUrl ?>/user/logout' class="button button-primary">Déconnexion</button></a>
+                </li>
+
+                <?php else : ?>
+                <li><a href='<?= $requestUrl ?>/user/register'  class="button button-primary">Créer un compte</a></li>
+                <li><a href='<?= $requestUrl ?>/user/login' class="button button-primary layout-right">Connexion</button></a></li>
+            <?php endif ?>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Affichage du template lié à la vue -->
+        <?php include $this->viewData['template'] ?>
+    </main>
+
+    <!-- Pied de page commun -->
+    <footer>
+        <ul class="link-list">
+            <li><img src="<?= $wwwUrl ?>/images/payment/visa.png" alt="Visa"></li>
+            <li><img src="<?= $wwwUrl ?>/images/payment/mastercard.png" alt="MasterCard"></li>
+            <li><img src="<?= $wwwUrl ?>/images/payment/paypal.png" alt="PayPal"></li>
+        </ul>
+        <small>Réalisé avec <i class="fa fa-heart"></i>&nbsp; par les élèves de la 3W Academy</small>
+    </footer>
+
+    <!-- Code principal JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/main.js"></script>
+</body>
+</html>

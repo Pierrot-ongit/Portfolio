@@ -1,0 +1,63 @@
+<?php if(isset($errorMessage)) : ?>
+    <div class="notice">
+        <p><?= $errorMessage ?></p>
+        <?php for ($i = 0; $i < count($errors); $i++): ?>
+            <span class="error-message"><?= $errors[$i] ?></span>
+        <?php endfor ?>
+        <br><img src="<?= $wwwUrl ?>/images/error.jpg" class="layout-center"/>
+    </div>
+<?php endif ?>
+
+<h2><i class="fa fa-check"></i> Payer la commande</h2>
+<div class="invoice">
+    <?php if(isset($user)): ?>
+    <p><?= $user['lastName']." ".$user['firstName'] ?></p>
+    <p class="city"><?= $user['postalCode']." ".$user['city'] ?></p>
+    <?php endif ?>
+</div>
+<table class="generic-table meal-list order">
+<caption>Récapitulatif de la commande</caption>
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th class="number">Quantité</th>
+        <th class="number">Prix Unitaire</th>
+        <th class="number">Prix Total</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <th class="number" colspan="3">Montant Total HT</th>
+        <th class="number money"><?= $orderTotalHT ?></th>
+    </tr>
+    <tr>
+        <th class="number" colspan="3">TVA (20 %)</th>
+        <th class="number money"><?= $TVA ?></th>
+    </tr>
+    <tr>
+        <th class="number" colspan="3">Montant Total TTC</th>
+        <th class="number money"><?= $totalTTC ?></th>
+    </tr>
+    <tr>
+        <th class="small layout-center" colspan="5" style="text-align: center">Commandé le <?= $order['creationTimeOrder'] ?></th>
+    </tr>
+    </tfoot>
+    <tbody>
+    <?php foreach ($orderPayement as $cartItem): ?>
+    <tr>
+        <td><img src="<?= $wwwUrl ?>/images/meals/<?= $cartItem['image'] ?>"> <?= $cartItem['productName'] ?></td>
+        <td><?= $cartItem['orderQuty'] ?></td>
+        <td class="number"><?= $cartItem['salePrice'] ?> €</td>
+        <td class="number"><?= $cartItem['totalHT'] ?> €</td>
+    </tr>
+    <?php endforeach ?>
+    </tbody>
+</table>
+<hr>
+<h3>Merci de bien vouloir procéder au paiement de la commande.</h3>
+<a  href='<?= $requestUrl ?>/order/success?successOrder=<?= $order['id'] ?>' id="payement-success" class="button button-primary">Payer</a>
+<a href='<?= $requestUrl ?>/?cancelOrder=<?= $order['id'] ?>' id="cancel-payement" class="button button-cancel">Annuler</a>
+<script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+<script src="<?= $wwwUrl ?>/js/ajax.js"></script>
+<script src="<?= $wwwUrl ?>/js/payement.js"></script>
+
