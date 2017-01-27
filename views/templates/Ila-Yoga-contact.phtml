@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!-- Perso CSS  = Icon Font Awesome + les 2 Font family-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Courgette' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="<?= $viewsLinks ?>css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="<?= $viewsLinks ?>css/IlaYoga-contact.css" />
+	<title>Ila Yoga - Contact</title>
+</head>
+<body>
+	<!--HEADER-->
+	<header>
+        <p class="portfolio"><a href="../demos.php">Retour au Portfolio</a></p>
+		<nav>
+			<a class="logo" href="ila_yoga.php"><img src="<?= $viewsLinks ?>img/img-IlaYoga/logo.png" alt="Logo de Ila Yoga" /></a>
+			<a href="#"><i class="fa fa-calendar-o"></i>Agenda</a>
+			<a href="#"><i class="fa fa-book"></i>Livre d'or</a>
+			<a href="#"><i class="fa fa-picture-o"></i>Album Photo</a>
+			<a href="ila_yoga_contact.php"><i class="fa fa-envelope-o"></i>Nous contacter</a>
+		</nav>
+
+	</header>
+	<!--MAIN CONTENT-->
+	
+	<main>
+		<section class="seances">
+		<h1>Réserver votre place pour le prochain cours de Yoga du rire!</h1>
+		<table>
+			<tr>
+				<th class="left" colspan="3"><h2>Yoga du rire avec Jacqueline (Paris)</h2></th>
+			</tr>
+			<tr>
+				<td class="left">05 Janvier 2016</td>
+				<td>15h30</td>
+				<td><a>Réserver ce créneau</a></td>
+			</tr>
+			<tr>
+				<td class="left">10 Janvier 2016</td>
+				<td>16h30</td>
+				<td><a>Réserver ce créneau</a></td>
+			</tr>
+			<tr>
+				<td class="left">15 Janvier 2016</td>
+				<td>15h30</td>
+				<td><a>Réserver ce créneau</a></td>
+			</tr>
+			<tr>
+				<td class="left">20 Janvier 2016</td>
+				<td>16h30</td>
+				<td><a>Réserver ce créneau</a></td>
+			</tr>
+		</table>	
+		<table>
+			<tr>
+				<th class="left" colspan="3"><h2>Yoga du rire avec Roger (Marseille)</h2></th>
+			</tr>
+			<tr>
+				<td class="left">05 Janvier 2016</td>
+				<td>15h30</td>
+				<td><a>Réserver ce créneau</a></td>
+			</tr>
+			<tr>
+				<td class="left">10 Janvier 2016</td>
+				<td>16h30</td>
+				<td><a>Réserver ce créneau</a></td>
+			</tr>
+			<tr>
+				<td class="left">15 Janvier 2016</td>
+				<td>15h30</td>
+				<td><a>Réserver ce créneau</a></td>
+			</tr>
+			<tr>
+				<td class="left">20 Janvier 2016</td></td>
+				<td>16h30</td>
+				<td><a>Réserver ce créneau</a></td>
+			</tr>
+		</table>
+
+</section>	
+<section class="formulaire">
+	<h3>Pour valider votre réservation, compléter ce formulaire :</h3>
+    <form method="post" action="traitement.php">
+
+          <input type="text" name="prénom" id="prénom" placeholder="Votre prénom" />
+          <input type="text" name="nom" id="nom" placeholder="Votre nom" />
+          <input type="text" name="mail" id="mail" placeholder="Votre adresse mail" />
+
+   <!-- Checkboxes -->
+   
+      <h4>Quels sont les raisons de votre venue ?</h4>
+         <input type="checkbox" name="détente" id="détente" />Besoin de me détendre
+         <input type="checkbox" name="médecin" id="médecin" />Mon médecin m'a conseillé de venir
+         <input type="checkbox" name="amis" id="amis" />Je veux tester avec des amis
+
+  <!-- Boutons Radios-->
+
+      <h4>Voulez vous souscrire à notre programme de fidélité</h4> 
+         <input type="radio" name="subscribe" value="oui" id="Oui" /> Oui
+         <input type="radio" name="subscribe" value="Non" id="Non" class="inline" /> Non
+
+<!-- Liste déroulante -->
+    
+      <h4>Comment avez vous connu Omnibus ?</h4>
+         <select name="omnibus" id="omnibus">
+             <option value="internet" selected>Par internet</option>
+             <option value="amis">Par des amis</option>
+             <option value="presse">Par la presse</option>
+             <option value="télé">Autre</option>
+         </select>
+
+
+     <input type="submit" value="Envoyer" class="bouton"/>
+  	</form>
+</section>
+
+</main>
+	<!--FOOTER-->
+	<footer>
+		<p>Ila Yoga</p>
+        <p>Votre bonheur est aussi le notre</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Pierre NOEL Portfolio</title>
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="<?= $viewsLinks ?>img/logo.png" />
+
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="<?= $viewsLinks ?>css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="<?= $viewsLinks ?>css/layout.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+</head>
+<body>
+    <!-- En-tête commune de l'application -->
+    <header>
+        <!-- Navigation Principale-->
+        <nav class="navbar navbar-fixed-top topnav">
+            <div class="container-fluid main-nav">
+                <ul class="nav navbar-nav">
+                    <li><a target="_blank" href="<?= $root ?>index.php">Accueil</a></li>
+                    <li><a target="_blank" href="<?= $root ?>games/jeux.php">Jeux</a></li>
+                    <li><a target="_blank" href="<?= $root ?>live.php">Sites réalisés</a></li>
+                    <li><a target="_blank" href="<?= $root ?>demos/demos.php">Sites Demos</a></li>
+                </ul>
+            </div>
+            <!-- Seconde Barre de Navigation pour la page-->
+            <?php if(isset($nav_template)): ?>
+            <?php include ''.$nav_template ?>
+            <?php endif ?>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chargement du template PHTML spécifié par le programme PHP -->
+        <?php include ''.$template ?>
+    </main>
+
+    <!-- Pied de page commun de l'application -->
+    <footer class="blog-footer">
+    </footer>
+    <!-- Code principal du projet -->
+    <script src="http://localhost/Portfolio/views/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="<?= $viewsLinks ?>css/contact.css">
+</head>
+<?php if(isset($error)): ?>
+ <div id="error-form">
+    <h4>Il y a une erreur dans le formulaire envoyé :</h4>
+     <h3><?php print $error ?></h3>
+     <a href="index.php#contact" class="btn retour">Retour au formulaire</a>
+ </div>
+<?php endif; ?>
+<?php if(isset($to)): ?>
+<div id="mail-send">
+    <h4>Votre message a bien été envoyé. Vous recevrez une réponse dans les 48h. Merci et à bientôt.</h4>
+    <p><span class="form-label">Votre nom et prénom :</span> <span class="form-msg">   <?php print $name ?></span></p>
+    <p><span class="form-label">Votre adresse-mail :</span> <span class="form-msg">   <?php print $email ?></span></p>
+    <p><span class="form-label">Votre message :</span><br> <span class="form-msg"> <?php print $msg ?></span></p>
+<a href="index.php" class="btn retour">Retour à l'accueil</a>
+</div>
+<?php  endif; ?>
+
+

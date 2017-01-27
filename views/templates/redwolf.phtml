@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Red Wolf</title>
+<!-- Le FLEXSLIDER -->
+<link rel="stylesheet" href="<?= $viewsLinks ?>css/flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="<?= $viewsLinks ?>css/jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
+<!-- Fin de la partie FLEXSLIDER -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?= $viewsLinks ?>css/redwolf.css">
+</head>
+
+<body>
+<header>
+	<a class="logo" href="index.html"><img src="<?= $viewsLinks ?>img/img-redwolf/logo.png" alt="Logo de Red Wolf" /></a>
+    <p class="portfolio"><a href="../demos.php">Retour au Portfolio</a></p>
+	<nav>
+		<ul>
+			<li media="screen and (max-width: 599px)"><a href="#">Notre concept</a></li>
+			<li media="screen and (max-width: 599px)"><a href="#">Nos produits</a></li>
+			<li media="screen and (max-width: 599px)"><a href="#">Nos tarifs</a></li>
+			<li media="screen and (max-width: 599px)"><a href="#">Contactez-nous</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<!-- Place somewhere in the <body> of your page -->
+		<div class="flexslider">
+		  <ul class="slides">
+		    <li>
+		      <img src="<?= $viewsLinks ?>img/img-redwolf/slider/1.jpg" />
+		    </li>
+		    <li>
+		      <img src="<?= $viewsLinks ?>img/img-redwolf/slider/2.jpg" />
+		    </li>
+		  </ul>
+		</div>
+
+	<section class="moto-exemples">
+		<h2>Découvrez <span class="gris"><a style="color:#C3B9BE;text-decoration:none;" href="#">nos motos</a></span></h2>
+		<HR>
+		<article>
+			<img src="<?= $viewsLinks ?>img/img-redwolf/team/1.jpg">
+			<h2>Moto #1</h2>
+			<HR>
+			<p>
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat.
+			</p>
+		</article>
+		<article>
+			<!-- éventuellement une div avec margin, padding, border-bottom et une largeur d'image pour donner du cachet-->
+			<div>
+			<span style="margin:10px 20px; 
+			padding-bottom:5px; 
+			border-bottom:1px solid #E74258;">
+			<a href="#"><img style="width:90%;" src="<?= $viewsLinks ?>img/img-redwolf/team/2.jpg"></a> <!-- cliquable-->
+			<h2><a style="color:#E74258;text-decoration:none;" href="#">Moto #2</a></h2> <!-- cliquable-->
+			</span>
+			<!-- fin de la div -->
+			<!--<HR> plus besoin si border-bottom-->
+			<p>
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat.
+			</p>
+			</div>
+		</article>
+		<article>
+			<img src="<?= $viewsLinks ?>img/img-redwolf/team/3.jpg">
+			<h2>Moto #3</h2>
+			<HR>
+			<p>
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat.
+			</p>
+		</article>
+		<article>
+			<img src="<?= $viewsLinks ?>img/img-redwolf/team/4.jpg">
+			<h2>Moto #4</h2>
+			<HR>
+			<p>
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus suscipit tortor eget felis porttitor volutpat.
+			</p>
+		</article>
+	</section>
+	<section class="présentation"> <!-- Eviter de mettre un accent au class et id-->
+			<h2 style="border-bottom:1px solid gray">Pour nous connaitre <span class="gris"><a href="#">plus en détail</a></span></h2> <!-- Cliquable vers la page "Qui sommes-nous ?"-->
+					<!--<HR> pas utile si border-bottom-->
+					<!--<div> cette div se place avant le Titre H2 : div > h2 >p par logique-->
+				<span class="detail">
+					<p>
+						Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat
+					</p>
+					<a href="#">
+						<span class="fa fa-facebook-square" aria-hidden="true"></span>
+					</a>
+					<a href="#">
+						<span class="fa fa-twitter-square" aria-hidden="true"></span>
+					</a>
+					<a href="#">
+						<span class="fa fa-linkedin-square" aria-hidden="true"></span>
+					</a>
+				</span>
+				<span class="detail">
+					<video width="100%" height="100%" controls="controls">
+						<source src="<?= $viewsLinks ?>img/img-redwolf/video/video.mp4" type="video/mp4" />
+						<source src="<?= $viewsLinks ?>img/img-redwolf/video/video.webm" type="video/webm" />
+						<source src="<?= $viewsLinks ?>img/img-redwolf/video/video.ogv" type="video/ogg" />
+					    La video n'a pas pu être chargée.
+					</video>
+				</span>
+	</section>
+</main>
+
+<footer class="gris">
+	<p>Lorem Ipsum</p>
+	<p>Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla porttitor accumsan tincidunt. </p>
+	<ul>
+		<li><a href="">Home</a></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Clients</a></li>
+		<li><a href="">Contact Us</a></li>
+	</ul>
+
+</footer>
+</body>
+</html>

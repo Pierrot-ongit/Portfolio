@@ -1,0 +1,49 @@
+<head>
+    <link rel="stylesheet" href="<?= $viewsLinks ?>css/dragon.css">
+</head>
+
+
+<h2 class="hide" id="result"></h2>
+<div class="container">
+    <div class="row">
+        <!-- Colonne du Joueur -->
+        <div class="col-md-3 well">
+            <h3>Votre personnage</h3>
+            <img src="<?= $viewsLinks ?>img/games/knight.jpg">
+            <h4>Points de vie</h4>
+            <h4 id="pvJoueur"></h4>
+            <h4>Votre équipement</h4>
+            <h5>Epée : <span id="sword"></span></h5>
+            <h5>Amure : <span id="armor"></span></h5>
+        </div>
+        <!-- Colonne du Log de combat -->
+        <div class="col-md-5">
+            <div class="commands row">
+                <button id="launch" class="btn btn-success">Commencez la partie !</button>
+                <button id="one_tour" class="btn btn-info">Tour d'action</button>
+                <button id="automatic" class="btn btn-warning">Combat Automatique</button>
+            </div>
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Déroulé du combat</div>
+                    <div class="panel-body log">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <h4>Difficulté du jeu : <span id="difficulty"></span></h4>
+            </div>
+        </div>
+        <!-- Colonne du Monstre -->
+        <div class="col-md-3 well">
+            <h3>Votre adversaire</h3>
+            <img src="<?= $viewsLinks ?>img/games/dragon.jpg">
+            <h4>Points de vie</h4>
+            <h4 id="pvMonster"></h4>
+        </div>
+    </div>
+</div>
+
+
+    <script src="<?= $viewsLinks ?>js/utilities.js"></script>
+  <script src="<?= $viewsLinks ?>js/dragon-slayer.js"></script>

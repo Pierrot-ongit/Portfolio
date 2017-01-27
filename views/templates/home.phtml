@@ -1,0 +1,159 @@
+<head>
+    <!-- Feuilles de style pour la page -->
+    <link rel="stylesheet" href="../Portfolio/views/css/home.css">
+
+
+</head>
+
+
+<!-- C'est à partir de là que commence la partie Intro -->
+<a id="accueil"></a>
+    <div class="intro">
+      <div class="bg-overlay">
+        <div class="container">
+          <!-- Le message de l'intro avec les buttons -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+        
+      <h1>Pierre Noel </h1>
+      <h2> Votre nouveau collaborateur en développement web !</h2>
+      <hr class="intro-divider">   
+              <ul class="list-inline intro-social-buttons">
+                <li><a href="https://www.linkedin.com/in/pierre-noel-75524767" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i><span class="network-name">LinkedIn</span></a></li>
+                <li><a href="http://fr.viadeo.com/fr/profile/pierre.noel9" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-viadeo" aria-hidden="true"> </i><span class="network-name">Viadeo</span></a></li>
+                <li><a href="https://github.com/Pierrot-ongit" target="_blank" class="btn btn-default btn-lg"><i class="fa-fw fa fa-github"></i><span class="network-name">Github</span></a></li>
+              </ul>
+                  <!-- Cloture des div du message et des buttons-->
+                  </div>
+              </div>  
+          </div>      
+       
+        <!--cloture des div de la partie intro-->
+        </div>
+      </div> 
+    </div>
+  
+  
+   <!-- C'est à partir de là que commence la Seconde partie Présentation -->
+<a id="presentation"></a>
+<div class="presentation">
+     <div class="bg-overlay2">
+      <div  class="container">
+        <div class="row">
+            <!-- Une photo-->        
+            <div class="col-md-6">
+             <p>
+            <!--  <img class="portrait thick-grey-border" alt="portrait pierre" src=""> -->
+             </p>
+            </div> <!-- Fin de la partie photo-->
+                <!-- Texte de présentation de pierre-->
+                <div class="texte-presentation col-md-6">
+                  <h1>Présentation</h1>
+                    <h5> Pierre, 29 ans. Après avoir terminé mes études en Ressources Humaines par un Master Spécialisé, j'ai continué mon apprentissage en me tournant vers le développement web, à la recherche d'autres défis </h5>
+                    <h5 class="skills">
+                      <br><br><b>Languages, CMS and Frameworks:</b>
+                  <br>HTML5, CSS3, Javascript, jQuery, Bootstrap3, Wordpress, Drupal
+                  <br><br><b>Autres compétences:</b>
+                  <br>Git, Responsive Web Design, Management des Ressources Humaines, Suite MS OFFICE (niveau avancé), Anglais Courant.
+                  </h5>
+                </div>  
+          
+        </div> <!-- End of class row-->  
+      </div> <!-- End of class container-->  
+   </div>   <!-- bg-overlay2-->  
+</div> <!-- End of class Présentation membres-->  
+  
+    <!-- C'est à partir de là que commence la partie Portfolio -->
+<a id="portfolio"></a>
+<div class="Portfolio centrage">
+    <div class="bg-overlay3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Portfolio</h1>
+                </div>  <!-- Fin de la class col-->
+            </div>   <!-- Fin de la class row-->
+
+            <div class="row">
+                <!-- Jeux -->
+                <div class="col-md-3 col-sm-5 portfolio-item">
+                    <div class="row">
+                        <a target="_blank" href="games/jeux.php">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a target="_blank" href="games/jeux.php"><h3>Jeux</h3></a>
+                    </div>
+                </div> <!-- Fin de la colonne Jeux -->
+
+                <!-- Sites Live -->
+                <div class="col-md-3 col-sm-5 portfolio-item">
+                    <div class="row">
+                        <a target="_blank" href="live.php">
+                            <i class="fa fa-gears" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a target="_blank" href="live.php"><h3>Sites Réalisés</h3></a>
+                    </div>
+                    <div class="row">
+                        <h5>En construction</h5>
+                    </div>
+                </div> <!-- Fin de la colonne Site live -->
+
+
+                <!-- Demos -->
+                <div class="col-md-3 col-sm-5 portfolio-item">
+                    <div class="row">
+                        <a target="_blank" href="demos/demos.php">
+                            <i class="fa fa-th-large" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a target="_blank" href="demos/demos.php"> <h3>Demos</h3></a>
+                    </div>
+                </div> <!-- Fin de la colonne Demos -->
+            </div>  <!-- Fin de la class row-->
+
+        </div> <!-- Fin de la class container-->
+    </div> <!-- Fin de la class bg-overlay3-->
+</div> <!-- Fin de la class Portfolio-->
+
+
+  <!-- C'est à partir de là que commence la partie Contact -->
+<a id="contact"></a>
+<section class="contact">
+     <div class="bg-overlay4">
+      <div  class="container">
+        <div class="row">  
+
+           <div class="contact-us col-md-4">
+              <h2  class="centrage">N'hésitez pas à prendre contact</h2>
+            </div>   
+          
+            <div class="form col-md-8">           
+              <form method="post" action="contact.php">
+               <div class="form-group1">
+                  <label for="nom-contact">Nom Prénom:</label>
+                  <input type="text" name="name" required class="form-control input-lg" id="nom-contact" placeholder="Entrer votre nom et prénom ici">
+               </div>
+               <div class="form-group2">
+                  <label for="email">Adresse Mail:</label>
+                  <input type="email" name="email" required class="form-control input-lg" id="email" placeholder="Entrer votre adresse mail ici">
+               </div> 
+               <div class="form-group3">
+                  <label for="message">Message:</label>
+                  <textarea name="message" required class="form-control input-lg" rows="5" id="message" placeholder="Entrer votre message ici"></textarea>
+                </div>
+                 
+              <button type="submit">Envoyer votre message</button>
+              
+             </form>
+            </div>  <!-- Fin de la class col--> 
+          
+        </div>   <!-- Fin de la class row-->       
+  </div> <!-- Fin de la class container-->      
+ </div> <!-- Fin de la class bg-overlay4-->
+</section> <!-- Fin de la class contact-->

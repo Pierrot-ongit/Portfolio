@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="<?= $viewsLinks ?>css/ardoise.css">
+    <!-- Classes -->
+    <script src="<?= $viewsLinks ?>js/classes/ColorPalette.class.js"></script>
+    <script src="<?= $viewsLinks ?>js/classes/Program.class.js"></script>
+    <script src="<?= $viewsLinks ?>js/classes/Pen.class.js"></script>
+    <script src="<?= $viewsLinks ?>js/classes/Slate.class.js"></script>
+</head>
+
+
+<h2>
+    <i class="fa fa-paint-brush"></i>
+    Ardoise Magique ;-)
+</h2>
+    <canvas id="slate" class="slate" height="480" width="640"></canvas>
+    <canvas id="color-palette" class="color-palette hide" height="256" width="256"></canvas>
+<hr>
+<nav class="toolbar">
+    <ul>
+        <li>
+            <label>Outils</label>
+            <button id="tool-clear-canvas" title="Effacer">
+                <i class="fa fa-eraser"></i>
+            </button>
+            <button id="tool-color-picker" title="Pipette">
+                <i class="fa fa-eyedropper"></i>
+            </button>
+            <button id="tool-save-canvas" title="Sauver">
+                <i class="fa fa-save"></i>
+            </button>
+        </li>
+        <li>
+            <label>Couleur</label>
+            <div class="pen-color black" data-color="black"></div>
+            <div class="pen-color maroon" data-color="#5C2121"></div>
+            <div class="pen-color red" data-color="#B9121B"></div>
+            <div class="pen-color yellow" data-color="#FFBD07"></div>
+            <div class="pen-color green" data-color="#13B813"></div>
+            <div class="pen-color seagreen" data-color="#029E9A"></div>
+            <div class="pen-color blue" data-color="#0378A6"></div>
+        </li>
+        <li>
+            <label>Epaisseur</label>
+            <button class="pen-size" data-size="1">Fin</button>
+            <button class="pen-size" data-size="2">Normal</button>
+            <button class="pen-size" data-size="5">Epais</button>
+        </li>
+    </ul>
+</nav>
+<a href="images-ardoise.php">Liste des images</a>
+
+<figure id="drawing" class="hide">
+    <img src="" alt="Dessin">
+    <figcaption> <span class='bigcaption'>Votre dessin </span>
+        <br>(Vous pouvez l'enregistrez avec clique-droit + Enregistrez-sous)</figcaption>
+</figure>
+
+<script src="<?= $viewsLinks ?>js/ardoise.js"></script>
+
+
