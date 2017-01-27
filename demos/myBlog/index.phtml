@@ -1,0 +1,21 @@
+<!-- Page d'accueil -->
+<?php if (isset($_SESSION['auth'])): ?>
+    <p>Bonjour ! Vous êtes connecté en tant que <b><?= $_SESSION['auth']['username'] ?></b></p>
+<?php endif ?>
+
+<h2><i class="fa fa-home"></i> Accueil</h2>
+
+<!-- Liste des articles du blog -->
+
+<ul class="post-list">
+    <?php foreach($articles as $article): ?>
+        <li class="post">
+            <h3>
+                <i class="fa fa-hand-o-right"></i>
+                <a title="Consulter l'article" href="show_post.php?id=<?= $article['id'] ?>"> <?= $article['title'] ?> </a>
+            </h3>
+            <article><?= substr($article['content'], 0, 30) ?> [...]</article>
+            <small> Rédigé par <?= $article['firstName'] ?> <?= $article['lastName'] ?> le <?= $article['creationTimeStamp'] ?> </small>
+        </li>
+    <?php endforeach ?>
+</ul>

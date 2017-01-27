@@ -1,0 +1,45 @@
+<h2>
+    <i class="fa fa-file-text-o"></i>
+    Article
+</h2>
+
+<section class="post">
+    <?php foreach($articles as $article): ?>
+        <h3><?= $article['title'] ?></h3>
+        <article><?= wordwrap(nl2br($article['content']), 75, "\n", true) ?></article>
+        <small> Rédigé par <?= $article['firstName'] ?> <?= $article['lastName'] ?> le <?= $article['creationTimeStamp'] ?> </small>
+    <?php endforeach ?>
+</section>
+<hr>
+<ul class="comment-list">
+    <?php foreach($comments as $comment): ?>
+        <li class="comment">
+            <h4>
+                <i class="fa fa-comment"></i>
+                Rédigé par <?= $comment['username'] ?>
+            </h4>
+            <article><?= $comment['message'] ?></article>
+        </li>
+    <?php endforeach ?>
+</ul>
+<hr>
+<!-- Formulaire de saisie d'un nouveau commentaire -->
+<form class="generic-form" action="show_post.php?id=<?= $idArticle ?>" method="post">
+    <fieldset>
+        <legend><i class="fa fa-sticky-note-o"></i> Nouveau commentaire</legend>
+        <ul>
+            <li>
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo" name="pseudo">
+            </li>
+            <li>
+                <label class="textarea" for="message">Commentaire :</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </li>
+            <li>
+                <button class="button button-primary" type="submit">Ajouter</button>
+                <a class="button button-cancel" href="index-blog.php">Annuler</a>
+            </li>
+        </ul>
+    </fieldset>
+</form>

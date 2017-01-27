@@ -1,0 +1,42 @@
+<h2><i class="fa fa-cogs"></i> Panneau d'administration</h2>
+
+<nav>
+    <a href="add_article.php">Rédiger un nouvel article</a>
+</nav>
+
+<table>
+    <caption>Liste des articles</caption>
+    <thead>
+    <tr>
+        <th>Titre</th>
+        <th>Article</th>
+        <th>Auteur</th>
+        <th>Catégorie</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <!-- Liste des articles -->
+
+    <?php foreach($articles as $article): ?>
+        <tr>
+            <td>
+                <a href="show_post.php?id=<?= $article['id'] ?>" target="_blank"><?= htmlentities($article['title']) ?></a>
+            </td>
+            <td>
+                <?= substr($article['content'], 0, 75) ?> Contenu de l'article (juste les 75 premiers caractères)
+            </td>
+            <td>
+                <?= $article['categoryName'] ?>
+            </td>
+            <td>
+                <a class="edit" href="edit_post.php?id=<?= $article['id'] ?>"><i class="fa fa-pencil"></i></a>
+            </td>
+            <td>
+                <a class="remove" href="delete_post.php?id=<?= $article['id'] ?>"><i class="fa fa-remove"></i></a>
+            </td>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+</table>

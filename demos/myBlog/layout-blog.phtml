@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Le Blog de Pierre</title>
+
+    <!-- Feuilles de style externes -->
+    <link rel="stylesheet" href="css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+
+    <!-- Feuilles de style de l'application -->
+    <link rel="stylesheet" href="css/blog-main.css">
+    <link rel="stylesheet" href="css/blog-theme.css">
+    <link rel="stylesheet" href="css/ui-button.css">
+    <link rel="stylesheet" href="css/ui-form.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+</head>
+<body>
+    <!-- En-tête commune de l'application -->
+    <header class="blog-header">
+        <nav>
+            <h1><a href="index-blog.php"><i class="fa fa-microphone"></i> Le blog de Pierre</a></h1>
+            <p><a href="../demos.php">Retour au Portfolio</a></p>
+            <ul>
+                <li>
+                    <a href="admin.php"><i class="fa fa-cogs"></i> Administration</a>
+                </li>
+                <?php if(isset($_SESSION['auth'])): ?>
+                <li>
+                    <a href="logout.php"><i class="fa fa-power-off"></i> Déconnexion</a>
+                </li>
+                <?php else: ?>
+                <li>
+                    <a href="login.php"><i class="fa fa-user"></i> Connexion</a>
+                </li>
+                <?php endif ?>
+            </ul>
+        </nav>
+    </header>
+    <!-- Affichage de notifications -->
+
+    <?php if(isset($_SESSION['message'])): ?>
+        <p><?= $_SESSION['message'] ?></p>
+        <?php unset($_SESSION['message']) ?>
+    <?php endif ?>
+
+    <main>
+        <!-- Chargement du template PHTML spécifié par le programme PHP -->
+        <?php include $template.'.phtml' ?>
+    </main>
+
+    <!-- Pied de page commun de l'application -->
+    <footer class="blog-footer">
+        <small>Le blog des élèves de la 3W Academy</small>
+    </footer>
+    <!-- Code principal du projet -->
+    <script src="js/main.js"></script>
+</body>
+</html>

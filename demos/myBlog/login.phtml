@@ -1,0 +1,24 @@
+<!-- Fichier login.phtml -->
+<h2><i class="fa fa-pencil"></i> Connexion</h2>
+
+<!-- Formulaire de connexion -->
+<form class="generic-form" action="login.php" method="post">
+    <fieldset>
+        <legend><i class="fa fa-gears"></i> Connexion</legend>
+        <ul>
+            <li>
+                <label for="username">Pseudo :</label>
+                <input type="text" id="username" name="username">
+                <small>Pas encore de compte ? <a href="register.php">S'inscrire</a></small>
+            </li>
+            <li>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+            </li>
+            <li>
+                <button class="button button-primary" type="submit">Connexion</button>
+                <a class="button button-cancel" href="index-blog.php">Annuler</a>
+            </li>
+        </ul>
+    </fieldset>
+</form>
