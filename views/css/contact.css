@@ -1,0 +1,35 @@
+main {
+    background-image: url("../img/commoveo/avion.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    padding-top:50px;
+}
+#error-form, #mail-send {
+    max-width: 800px;
+    margin: 80px auto 0px auto;
+    color: #fffaf6;
+}
+#error-form h3 {
+    color: #fffaf6;
+}
+#error-form h4 {
+    color: #7d0e14;
+}
+#mail-send h4 {
+    color: #0a7d06;
+}
+#error-form p, #mail-send p {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+.form-label {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.retour {
+    background-color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}

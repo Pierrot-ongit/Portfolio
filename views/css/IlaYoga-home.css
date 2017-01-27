@@ -1,0 +1,182 @@
+/*  VISUALISATION DES BLOCS  */
+
+/*div, header, section, article, aside, nav {
+	border: 1px dashed rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.05);
+}*/
+
+/*.clear {
+	border: 1px dashed red;
+}*/
+
+/*GLOBAL */
+
+
+body {
+	max-width: 1500px;
+	font-size: 1em;
+	font-family: "Open Sans";
+}
+h1 {
+	font-size:3em;
+	font-family: "Courgette", cursive;
+}
+ h2, h3, h4, h5, h6 {
+	font-size:2em;
+	font-family: "Courgette", cursive;
+}
+/*
+.fa {
+	display: inline-block;
+	padding-right:10px;
+	padding-left:10px;
+}
+*/
+/* Style pour le Header */
+header {
+	height: 700px;
+  min-height: 650px;
+	background-image:url(../img/img-IlaYoga/fond.jpg);
+
+	background-attachment: fixed;
+  background-position: center;
+  opacity:0.75;
+}
+
+header img {
+  margin-left: 150px;
+
+}
+header .portfolio a {
+	font-family: "Courgette";
+	font-size: 1.6em;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0px 25px;
+	margin: 0 15px;
+	color: #49C3B4;
+}
+nav {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 60px;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+
+
+nav li {
+	font-family: "Courgette", cursive;
+	display: inline-block;
+	text-align: center;
+	padding: 5px 15px 0px 15px;
+	font-size: 1.5em;
+}
+nav a{
+	color: #49C3B4;
+    text-decoration: none;
+
+}
+
+nav span {
+	font-family: "Courgette", cursive;	
+}
+
+
+
+#slogan, #promo  {
+	background-color: #49C3B4;
+	color: white;
+	text-align: center;	
+}
+
+#slogan {
+  margin-top: 175px;
+	line-height: 1.5;
+	padding-top: 25px;
+	padding-bottom: 25px;
+  opacity: 0.75;
+  bottom: 0%;
+}
+ 
+ #slogan h1{
+	
+ }
+
+/* Style pour le Main */
+main {
+	 margin:0 auto;
+	 line-height: 1.4;
+}
+main p {
+	padding: 15px;
+	font-family: "Open Sans";
+	line-height: 1.8;
+}
+#promo {
+	font-size: 1.5em;
+  	padding: 10px;
+}
+
+#Présentation {
+	width : 80%;
+	margin: 0 auto;
+	color: #425669;
+	margin-bottom: 20px;
+}
+
+main ul {
+	list-style-type: disc;
+	margin-left: 50px;
+}
+
+#Colonnes {
+
+	background-color: #B7B12E;
+	color: white;
+	text-align: center;
+	padding: 40px 0 20px 0;
+}
+
+article {
+	width: 25%;
+	padding: 15px;
+	display: inline-block;
+	vertical-align: top
+}
+
+article img {
+	border-radius: 50%;
+	text-align: center;
+	max-height: 40%;
+	max-width: 40%;
+}
+article h3 {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:30%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+ }   
+
+/* Style pour le Footer */
+footer {
+	clear: both;
+	background-color: #49C3B4;
+	color: white;
+	text-align: center;
+	padding: 30px 0 30px;
+	font-size: 1.2em;
+}

@@ -1,0 +1,22 @@
+.fa{
+    font-size: 70px;
+}
+.row-jeux {
+    padding-top: 30px;
+}
+.portfolio-item{
+    margin-top: 20px;
+}
+.portfolio-item img {
+    heigth : 250px;
+    width:  250px;
+}
+.portfolio-item .fa {
+    color: #1780da;
+}
+.portfolio-item .fa:hover {
+    color: #2b6698;
+}
+#page-jeux {
+    padding-bottom: 40px;
+}

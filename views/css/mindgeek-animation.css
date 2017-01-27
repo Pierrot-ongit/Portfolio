@@ -1,0 +1,24 @@
+*:hover {
+	transition: all .2s ease 0s;
+}
+
+header ul a:hover {
+	color: #FD869B;
+}
+
+header li .fa:hover {
+	color: #39525A;
+}
+
+
+#panel-offres:hover .offre {
+	opacity: 0.65;
+}
+
+#panel-offres .offre:hover {
+	opacity:1;
+}
+
+.commande:hover {
+	background-color: #ea5f77;
+}	

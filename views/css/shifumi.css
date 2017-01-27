@@ -1,0 +1,27 @@
+#image-shifumi {
+    background-image: url('../img/games/rock_paper_scissors_lizard_spock.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: transparent;
+    min-height: 750px;
+
+}
+#result {
+    margin-top: 50px;
+    margin-right: 50px;
+    height: 175px;
+    width: 300px;
+    background-color: white;
+    border: 5px solid darkblue;
+    padding: 10px;
+    float: right;
+}
+
+#launch {
+    float: left;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+span{
+    color: darkred;
+}

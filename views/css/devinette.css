@@ -1,0 +1,23 @@
+h4 {
+    text-align: center;
+}
+.well {
+    text-align: center;
+    border: 2px solid cyan;
+    width: 350px;
+    margin: 0 auto;
+}
+
+button {
+    margin: 5px;
+}
+li {
+    list-style: none;
+}
+.counter, #result {
+    color: red;
+    font-weight: bold;
+}
+ul {
+    padding: 0;
+}

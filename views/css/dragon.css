@@ -1,0 +1,24 @@
+.container{
+ margin-top: 50px;
+}
+
+h2, h3, h4 {
+    text-align: center;
+}
+h2 {
+    color: #01A2A6;
+    margin-bottom: 0px;
+}
+.hide {
+    display:none;
+}
+.log{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.commands {
+    margin-bottom: 15px;
+}
+li {
+    list-style: none;
+}

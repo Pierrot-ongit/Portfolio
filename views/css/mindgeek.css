@@ -1,0 +1,289 @@
+/*  VISUALISATION DES BLOCS  */
+/*
+div, header, section, article, aside, nav {
+	border: 1px dashed rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.05);
+}
+*/
+/*.clear {
+	border: 1px dashed write;
+}*/
+
+/*GLOBAL */
+header .portfolio{
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0px 15px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	line-height: 1.8;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+.flex {
+	display: flex;
+  /*justify-content: space-around;*/
+}
+
+/* Style pour le Header */
+
+
+header #pub h1 {
+	font-size: 3em;
+	font-family: 'Candal', sans-serif;
+	margin: 0 auto;
+}
+
+
+
+header p {
+	font-size: 2em;
+}
+
+header nav {
+	display: inline-flex;
+	width: 100%;
+	padding: 10px 0;
+}
+
+header ul {
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+header li {
+	margin: auto;
+	text-align: center;
+	list-style: none;
+	font-family: "Candal";
+  flex-grow : 1;
+}
+header ul a {
+	color:#39525A;
+	font-weight: bold;
+}
+
+header li .fa {
+	color: #FD869B;
+	font-size: 1.5em;
+}
+
+header input[name="question"] {
+  	text-transform: uppercase;
+	background-color: #FD879A;
+	color: white;
+  	font-size: 2em;
+  	padding: 25px 100px;
+  	/* Au lieu de 
+  	padding-left: 50px;
+  	margin: 0 auto;*/
+  	/* Et avec en plus : */
+  	letter-spacing: 2px;
+  	width: 100%;
+	border: 0;
+}
+header input[name="question"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:    white;
+}
+
+header input[name="question"]::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    white;
+	opacity:  1;
+}
+header input[name="question"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color:    white;
+}
+
+/* Style pour le FOOTER */
+
+
+footer {
+	text-align: center;
+	color:white;
+	background-color: #25414E;
+	padding: 30px;
+}
+
+footer ul {
+	display: inline-flex;
+	width: 100%;
+	margin: 0;
+	padding-left: 0;
+	flex-wrap: wrap;
+}
+
+footer a {
+	color: white;
+	padding: 5px;
+	font-weight: bold;
+}
+
+footer li {
+	margin: auto;
+	list-style: none;
+  flex-grow : 1;
+}
+
+
+
+
+/* Style pour le MAIN */
+
+main {
+	margin: 0 auto;
+	max-width: 90%;
+	padding: 25px;
+}
+
+.offre, .colonne {
+	padding: 5px;
+	/*width: 30%;*/
+  	flex-grow : 1;
+	margin: 0 auto;
+}
+
+
+main h2 {
+	font-size: 1.8em;
+	font-family: 'Candal', sans-serif;
+	font-weight: normal;
+	text-align: center;
+	color: #25414E;
+	border: 1px #25414E;
+ 	border-style: dotted dotted none dotted;
+ 	padding: 20px ;
+  margin-bottom: 50px;
+}
+main h3 {
+	font-size: 1.2em;
+	font-family: 'Candal', sans-serif;
+	font-weight: normal;
+	text-align: center;
+}
+
+/* Style pour les 3 offres (cloud, serveur mutualisé, serveur dédié*/
+
+.explication {
+ padding: 5px;
+ margin-bottom: 50px;
+}
+
+#panel-offres {
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+
+.offre {
+  border: 1px dotted #25414E;
+  align-self: flex-start;
+  margin: 25px;
+}
+
+.offre h3:first-of-type {
+	color:white!important;
+	background-color: #25414E;
+	padding: 25px;
+	margin-bottom: 10px;
+}
+
+.offre h3:nth-of-type(2){
+	color: grey;
+}
+
+.commande {
+	display: block;
+	color:white;
+	background-color: #FD879A;
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	font-family: "Candal";
+}
+
+.offre span {
+	text-align: center;
+	text-decoration-style: italic;
+}
+
+
+/* Style pour l'index*/
+
+#pub {
+	background-image: url(../img/mindgeek/background.jpg);
+	background-size: cover;
+	text-align: center;
+	color: white;
+	padding: 150px 75px;
+}
+
+.colonne h3, .colonne .fa {
+  color: #FD879A;
+}
+.colonne i {
+  font-size: 2em;
+}
+.icon-offre {
+	text-align: center;
+}
+/* Style pour la  page contact*/
+
+#infos-contact {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact {
+  border: 1px #FD879A;
+  border-style: dotted none none none;
+  padding-top: 15px;
+}
+.colonne p a {
+  color: #FD879A;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:30%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+ } 
+
+/* RESPONSIVE DESIGN */
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 960px) {
+	header li, footer li {
+		padding: 15px;
+	}
+	#pub {
+		padding: 50px 25px;
+	}
+	header ul, .flex, footer ul, #panel-offres {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	.colonne, .offre {
+		align-self: stretch;
+	}
+}

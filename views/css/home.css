@@ -1,0 +1,190 @@
+
+
+/* La première partie l'intro */
+.intro {
+  background-size: cover;
+  height: 855px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.bg-overlay {
+  background:rgba(0,0,0, 0.3);
+  background-image: url("../img/commoveo/forest.jpg");
+  background-repeat: no-repeat;
+  height: 855px;
+  background-size: cover;
+
+  height: 855px;
+}
+.intro-message {
+  padding-top: 310px
+}
+.intro-message h1{
+  color: #0c6ca6;
+}
+
+.intro-message h2{
+  color: white;
+}
+
+
+/* social buttons */
+.btn {
+  display: inline-block;
+  color: #000;
+  border: 2px outset rgba(0, 0, 0, 0.9);
+  background: #C0C0C0;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 20);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+	color: #fff;
+  border: 2px outset rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0, 0.9);
+  transform:scale(1.1);
+  transition: 0.2s;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 20);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  letter-spacing: 2px;
+}
+
+
+/* La seconde partie  */
+.presentation {
+  padding: -100px 0;
+    background-size: cover;
+    height: 855px;
+}
+.bg-overlay2{
+
+  background: rgba(0,0,0, 0.1);
+  background-image: url("../img/commoveo/temple-nuage.jpg");
+  background-repeat: no-repeat;
+  height: 855px;
+  background-size: cover;
+}
+/* le style pour la photo de portrait*/
+.portrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: auto;
+}
+.thick-grey-border {
+    border-color: grey;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+/* fin du style pour la photo de portrait*/
+
+.texte-presentation {
+  padding-top: 70px;
+  padding-left: 50px;
+  color: #084667;
+}
+.texte-presentation h1{
+  color: #084667;
+}
+.texte-presentation h5{
+  font-size: 25px;
+}
+
+.skills{
+  margin-top: 190px;
+}
+
+
+/* La 3ème Partie : Portfolio */
+.Portfolio {
+  padding: -100px 0;
+    no-repeat: center center fixed;
+    background-size: cover;
+    height: 855px;
+}
+.Portfolio h1{
+  padding-top : 100px;
+}
+.bg-overlay3 {
+  background: rgba(0,0,0, 0.1);
+  background-image: url("../img/commoveo/san-francisco-nuages.jpg");
+  background-repeat: no-repeat;
+  height: 855px;
+  background-size: cover;
+}
+
+.Portfolio .row {
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio-item {
+
+  max-width: 400px;
+  margin: 50px auto;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.portfolio-item i{
+  font-size: 5em;
+  color: #1085d2;
+}
+.portfolio-item:hover {
+  opacity: 1;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+
+}
+
+.portfolio-item i:hover {
+  transition: 0.5s;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.9);
+   opacity:1;
+}
+
+
+
+/* La 4ème Partie : Contact */
+.contact {
+  padding: -50px 0;
+    no-repeat: center center fixed;
+    background-size: cover;
+    height: 655px;
+    
+}
+.bg-overlay4{
+  background: rgba(0,0,0, 0.2);
+  background-image: url("../img/commoveo/road-australie.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 655px;
+  padding-top:50px;
+}
+.contact-us {
+  padding-top:70px;
+  padding-left: 50px;
+}
+.contact-us h2{
+  color: #0c6ca6;
+}
+.form {
+  padding-top:80px;
+  padding-left:300px;
+}
+.form label {
+  color: #0c6ca6;
+}
+.contact form input {
+  margin-bottom: 10px;
+}
+.contact form button {
+  color: #0c6ca6;
+  margin-top: 10px;
+  font-size: 1.2em;
+}

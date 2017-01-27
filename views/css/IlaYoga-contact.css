@@ -1,0 +1,160 @@
+/*  VISUALISATION DES BLOCS  */
+
+	/*div, header, section, article, aside, nav {
+		border: 1px dashed rgba(0,0,0,0.15);
+		background-color: rgba(0,0,0,0.05);
+	}*/
+
+	/*.clear {
+		border: 1px dashed red;
+	}*/
+
+/*GLOBAL */
+
+body {
+	font-family: "Open Sans", Arial;
+	margin: 0 auto;
+	color: #34495E;
+	line-height: 1.8;
+	width: 85%;
+	min-width: 1000px;
+	max-width: 1500px;
+}
+
+a {
+	color: #49C3B4;
+	text-decoration: none;
+}
+
+h1, h2, h3 {
+	font-family: "Courgette";
+	font-weight: normal;
+	text-align: center;
+}
+
+
+/* HEADER */
+header nav {
+	text-align: center;
+}
+
+header a {
+	font-family: "Courgette";
+	font-size: 1.6em;
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px 25px;
+	margin: 0 15px;
+	color: #49C3B4;
+}
+
+header .portfolio a {
+	padding: 0px;
+}
+
+.logo {
+	margin: -25px;
+}
+
+header nav a .fa {
+	display: block;
+}
+
+
+
+
+/* MAIN */
+/*TABLE*/
+.seances {
+	width: 100%;
+	margin: 0 auto;
+}
+table {
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+	font-weight: bold;
+}
+table, td, th {
+	border: 1px solid #CCCCCC;
+	border-collapse: collapse;
+}
+
+table td {
+	padding: 5px;
+}
+
+table th {
+	background-color: #49c3b4;
+	color: white;
+}
+.left, .left h2 {
+	text-align: left;
+}
+
+
+/*FORMULAIRE */
+h4 {
+	font-size: 1.1em;
+	clear:both;
+}
+h3 {
+	font-size: 1.5em;
+}
+
+
+form {
+
+	margin: 0px auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+
+.formulaire form input[type=text] {
+	width: 43%;
+	margin: 2.5%;
+	float: left;
+	color: #49C3B4;
+	border: 0;
+	border-bottom: 1px solid #49C3B4;
+	background-color: white;
+	padding: 10px;
+}
+
+.formulaire form #mail {
+	width: 95%;
+}
+form input[type=checkbox], form input[type=radio] {
+	margin: 25px;
+}
+
+.formulaire form select {
+	border: 1px solid #49C3B4;
+	background-color: white;
+	color: #49C3B4;	
+	padding: 10px;
+	margin: 2.5%;
+	width: 95%;
+}
+
+
+.bouton {
+	background-color: #49c3b4;
+	color: white;
+	padding: 10px 25px;
+	border: 0px;
+}
+
+
+/* FOOTER */
+footer {
+	background-color: #49c3b4;
+	margin: 0;
+	padding: 20px;
+}
+
+footer p {
+	color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+}
